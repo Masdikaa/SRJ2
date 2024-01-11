@@ -47,5 +47,7 @@ dependencies {
 
     // MapBox
     implementation("com.mapbox.maps:android:11.0.0")
+    // Animated Bottom Bar
+    implementation 'nl.joery.animatedbottombar:library:1.1.0'
 
 }
