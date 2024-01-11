@@ -3,9 +3,11 @@ package com.masdika.srj2
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.masdika.srj2.databinding.ActivityMainBinding
 import nl.joery.animatedbottombar.AnimatedBottomBar
 
@@ -49,6 +51,20 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+
+        binding.openDialog.setOnClickListener {
+            val dialog = BottomSheetDialog(this)
+            val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
+            val btnClose = view.findViewById<ImageView>(R.id.close_button)
+
+            btnClose.setOnClickListener {
+                dialog.dismiss()
+            }
+
+            dialog.setCancelable(false)
+            dialog.setContentView(view)
+            dialog.show()
+        }
     }
 
 }

@@ -10,6 +10,18 @@
         <item name="colorOnSecondary">@color/secondary</item>
 
         <item name="android:statusBarColor">@color/dark_gray</item>
+
+        <!-- Applying Dialog Sheet Bottom Style-->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <!-- Define Dialog Sheet Bottom Style-->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModelStyle</item>
+    </style>
+
+    <style name="AppModelStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/dialog_sheet_round</item>
     </style>
 
     <style name="Theme.SRJ2" parent="Base.Theme.SRJ2" />

@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/top_border"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@color/dark_gray"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="0dp"
@@ -13,7 +23,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_bar_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/top_border" />
 
     <com.mapbox.maps.MapView
         android:id="@+id/mapView"
@@ -22,7 +32,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_bar_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_border"
         app:mapbox_cameraBearing="0.0"
         app:mapbox_cameraPitch="0.0"
         app:mapbox_cameraTargetLat="-7.6298"
@@ -30,6 +40,7 @@
         app:mapbox_cameraZoom="10" />
 
     <LinearLayout
+        android:id="@+id/open_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/top_round"
