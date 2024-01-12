@@ -37,7 +37,9 @@
         app:mapbox_cameraPitch="0.0"
         app:mapbox_cameraTargetLat="-7.6298"
         app:mapbox_cameraTargetLng="111.5232"
-        app:mapbox_cameraZoom="10" />
+        app:mapbox_cameraZoom="10"
+        app:mapbox_locationComponentEnabled="true"
+        app:mapbox_locationComponentPuckBearing="heading" />
 
     <LinearLayout
         android:id="@+id/open_dialog"
